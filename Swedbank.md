@@ -23,14 +23,16 @@ And save the user input form.
 Point any short domain with a name like `p0wn.eu` and write an IP resolution into the system’s `hosts` file. Then host any JS payload on the HTTPS web server.
 
 Next a user (a victim) must visit the following page from the main menu:
-```1. Privatiems▸
-2. Kasdienės paslaugos▸
+```
+1. Privatiems ▸
+2. Kasdienės paslaugos ▸
 3. Apžvalga
 ```
 
 (English)
-```1. Private▸
-2. Everyday banking▸
+```
+1. Private ▸
+2. Everyday banking ▸
 3. My finances
 ```
 Reference url: 
@@ -38,15 +40,15 @@ https://www.swedbank.lt/private/d2d/accounts/overview
 
 Or in mobile application goto
 ```
-1. Paslaugos
-2. Kitos paslaugos
+1. Paslaugos ▸
+2. Kitos paslaugos ▸
 3. Mano finansų apžvalga
 ```
 
 (English)
 ```
-1. Services
-2. Other services 
+1. Services ▸
+2. Other services ▸ 
 3. Summary of my finances
 ```
 
@@ -65,14 +67,18 @@ Content-Type: application/javascript
 
 alert(document.domain);
 ```
-**Mitigation**
+Mitigation
+----------
 Do a proper HTML Sanitisation for user input and page rendering afterwards.
 
-Reference:
+Reference
+---------
 https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
 
-———————————————————
+
 TIMELINE
+--------
+```
 2023-10-15 DISCOVERED VULNERABILITY
 2023-10-16 A REPORT CREATED AND SENT TO responsible-disclosure@swedbank.com
 2023-10-16 AUTOREPLY RECIEVED
@@ -80,4 +86,4 @@ TIMELINE
 2023-12-14 REPLY RECEIVED
 2023-12-14 RECEIVED CONFIRMATION THAT ISSUE WAS RESOLVED
 2024-01-01 Public release
-———————————————————
+```
