@@ -1,3 +1,6 @@
+SWEDBANK: Stored-Cross-Site-Scripting vulnerability in Retail Banking application
+=================================================================================
+
 Vulnerability here (internet baking platform)
 
 === Description ===
