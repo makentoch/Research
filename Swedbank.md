@@ -1,12 +1,13 @@
 SWEDBANK: Stored-Cross-Site-Scripting vulnerability in Retail Banking application
 =================================================================================
 
-**Description**
-
+Description
+-----------
 A regular authenticated internet banking user has an option to set a bank’s account name to anything arbitrary with char limit of 35. The internet baking application hosted at https://www.swedbank.lt/private is vulnerable to a Stored-Cross-Site-Scripting attack in the this account name field. 
 A malicious actor can set a specially crafted payload and save it to the own account. It is possible that other system’s users (banking personnel, call centre stuff etc.) who work regularly with retail clients could “find” this malicious payload while observing a specific account through routine tasks or on demand calls. This would lead to compromise other users and elevate privileges for an attacker.
 
-**Proof-of-Concept**
+Proof-of-Concept
+----------------
 Authenticate to the web application at:
 https://www.swedbank.lt/private
 
@@ -34,15 +35,17 @@ Next a user (a victim) must visit the following page from the main menu:
 ```
 Reference url: 
 https://www.swedbank.lt/private/d2d/accounts/overview
------------------------------------------------------
+
 Or in mobile application goto
-```1. Paslaugos
+```
+1. Paslaugos
 2. Kitos paslaugos
 3. Mano finansų apžvalga
 ```
 
 (English)
-```1. Services
+```
+1. Services
 2. Other services 
 3. Summary of my finances
 ```
@@ -78,9 +81,3 @@ TIMELINE
 2023-12-14 RECEIVED CONFIRMATION THAT ISSUE WAS RESOLVED
 2024-01-01 Public release
 ———————————————————
-
-
-
-
-
-
