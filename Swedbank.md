@@ -55,7 +55,11 @@ Or in mobile application goto
 ```
 
 Then the payload is executed (pictures included).
+Desktop (browser):
 ![Stored XSS attack](https://i.imgur.com/QRLirjN.png)
+
+Mobile:
+![Stored XSS attack on mobile app](https://i.imgur.com/4bezvvo.jpeg)
 
 The issue with unfiltered user input and fail to sanitise output in the web content can lead to high security incidents since an attacker can invoke and launch various JS scripts or JS frameworks like BeEF (The Browser Exploitation Framework https://beefproject.com/) in the context of a user or other system’s users (banking personnel, call center stuff etc.) who work regularly with retail clients.
 
