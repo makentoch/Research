@@ -63,7 +63,7 @@ Mobile:
 
 The issue with unfiltered user input and fail to sanitise output in the web content can lead to high security incidents since an attacker can invoke and launch various JS scripts or JS frameworks like BeEF (The Browser Exploitation Framework https://beefproject.com/) in the context of a user or other system’s users (banking personnel, call center stuff etc.) who work regularly with retail clients.
 
-Payload server `p0wn.eu` content:
+Payload of the server's `p0wn.eu` content:
 ```
 HTTP/1.1 200 OK
 Server: Apache
