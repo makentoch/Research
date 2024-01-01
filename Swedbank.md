@@ -13,7 +13,7 @@ https://www.swedbank.lt/private
 
 Then open the bank’s account setting page at:
 https://www.swedbank.lt/private/home/important/aliases
-(pageId = private.home.important.aliases)
+`pageId = private.home.important.aliases`
 
 Then change any account name to this payload:
 ```
