@@ -1,5 +1,5 @@
-SWEDBANK: Blind Stored Cross-Site-Scripting (XSS) in Retail Banking
-=============================================================
+Blind Stored Cross-Site-Scripting (XSS) in Swedbank Retail Banking
+==================================================================
 
 Description
 -----------
