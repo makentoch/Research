@@ -3,8 +3,8 @@ SWEDBANK: Blind Stored Cross-Site-Scripting in Retail Banking
 
 Description
 -----------
-A regular authenticated internet banking user has an option to set a bank’s account name to anything arbitrary with char limit of 35. The internet banking application hosted at https://www.swedbank.lt/private is vulnerable to a blind Stored Cross-Site-Scripting attack in the this account name field. 
-A malicious actor can set a specially crafted payload and save it to the own account. It is possible that other system’s users (banking personnel, call centre stuff etc.) who work regularly with retail clients could “find” this malicious payload while observing a specific account through routine tasks or on demand calls. This would lead to compromise other users and elevate privileges for an attacker.
+A regular authenticated internet banking user has an option to set a bank’s account name to anything arbitrary with a char limit of 35. The internet banking application hosted at https://www.swedbank.lt/private is vulnerable to a blind Stored Cross-Site-Scripting attack in the account's name field. 
+A malicious actor can set a specially crafted payload and store it for a blind attack on the bank's staff. It is possible that other system’s users (banking personnel, call centre stuff etc.) who work regularly with retail customers could “find” this malicious payload while observing a specific account through routine tasks or on demand calls. This would lead to compromise other users and elevate privileges for an attacker.
 
 Proof-of-Concept
 ----------------
