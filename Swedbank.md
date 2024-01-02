@@ -7,7 +7,7 @@ Regular authenticated internet banking users can include arbitrary input within 
 This makes internet banking application hosted at https://www.swedbank.lt/private vulnerable to a blind Stored Cross-Site-Scripting attack (XSS). 
 
 A malicious actor would first place arbitrary javascript payload within their bank account name. 
-Once it is accessed by another party - for example banking personnel, call centre stuff etc. attacker-controlled javascript code would be executed within the context of the victim browser.
+Once it is accessed by another party - for example banking personnel, call centre staff etc. attacker-controlled javascript code would be executed within the context of the victim browser.
 This could then be used to both leak confidential information and perform escalation of privillege attacks.
 
 Proof-of-Concept
@@ -15,8 +15,6 @@ Proof-of-Concept
 
 Authenticate to the web application and open the bank’s account setting page at:
 https://www.swedbank.lt/private/home/important/aliases
-
-`pageId = private.home.important.aliases`
 
 Include following javascript code within your bank account name and save changes:
 ```
@@ -63,7 +61,7 @@ Desktop (browser):
 Mobile:
 ![Stored XSS attack on mobile app](https://i.imgur.com/4bezvvo.jpeg)
 
-Unfiltered user input and failure to sanitize output in the web content leads to high security incidents since an attacker can invoke and launch various JS scripts or JS frameworks like BeEF (The Browser Exploitation Framework https://beefproject.com/) in the context of a user or other system’s users (banking personnel, call center stuff etc.) browser.
+Unfiltered user input and failure to sanitize output in the web content leads to high security incidents since an attacker can invoke and launch various JS scripts or JS frameworks like BeEF (The Browser Exploitation Framework https://beefproject.com/) in the context of a user or other system’s users (banking personnel, call center staff etc.) browser.
 
 Payload of the server's `p0wn.eu` content:
 ```
